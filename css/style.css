@@ -32,11 +32,12 @@ h1 {
 
 .wheel {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .pointer {
     position: absolute;
-    left: 14rem;
     top: 2.4rem;
     z-index: 1;
     width: 1.5rem;
@@ -397,4 +398,10 @@ h1 {
 
 #result_container {
     display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .pointer {
+        left: 10;
+    }
 }
