@@ -7,11 +7,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: #3498db solid 2px;
     background-color: #dbf5f1;
     font-family: sans-serif;
     font-weight: 400;
-    height: 40rem;
 }
 
 h1,
@@ -25,12 +23,10 @@ h2 {
 h1 {
     font-size: 2rem;
     color: chocolate;
-    /* 67.36px */
 }
 
 .container {
-    width: 20rem;
-    /* height: 40rem; */
+    width: 29.5rem;
     text-align: center;
 }
 
@@ -40,7 +36,7 @@ h1 {
 
 .pointer {
     position: absolute;
-    left: 9.25rem;
+    left: 14rem;
     top: 2.4rem;
     z-index: 1;
     width: 1.5rem;
@@ -52,10 +48,6 @@ h1 {
     border-radius: 50%;
 }
 
-a {
-    display: none;
-}
-
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -65,6 +57,7 @@ a {
         transform: rotate(360deg);
     }
 }
+
 /* input welcome */
 
 .form {
@@ -77,7 +70,7 @@ a {
     background: lightblue;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 20px;
     border-radius: 5px;
@@ -156,34 +149,6 @@ a {
     color: var(--font-color);
     cursor: pointer;
 }
-
-/* .input {
-    background-color: #383838;
-    border: 1ex solid none;
-    border-top-width: 1.7em;
-    margin: 0;
-    padding: 0;
-    color: #383838;
-    word-wrap: break-word;
-    outline: 7px solid #383838;
-    height: 30px;
-    font-size: 17px;
-    text-align: center;
-    transition: all 1s;
-    max-width: 190px;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.input:hover {
-    border-top-width: 0.2em;
-    background-color: #f1e8e8;
-}
-
-.input:focus {
-    border-top-width: 0.2em;
-    background-color: #f1e8e8;
-} */
 
 /* button for welcome */
 #button {
@@ -328,4 +293,108 @@ a {
     height: calc(100% - 4px);
     background-color: rgba(0, 0, 0, .15);
     box-shadow: 0 1px 1px 0 black, inset 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+.container_youwon {
+    width: 29.4rem;
+    height: 35rem;
+    /* Add your background pattern here */
+    --sz: 15px;
+    --c0: #000;
+    --c1: #c71175;
+    --ts: 50% / calc(var(--sz) * 8) calc(var(--sz) * 16);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    --dot: var(--c1) 0 calc(var(--sz) * 0.78),
+        #fff0 calc(calc(var(--sz) * 0.78) + 1px) 100%;
+    --dot2: radial-gradient(circle at 90% 0%, var(--dot)) var(--ts),
+        radial-gradient(circle at 65% 0%, var(--dot)) var(--ts),
+        radial-gradient(circle at 40% 0%, var(--dot)) var(--ts),
+        radial-gradient(circle at 15% 0%, var(--dot)) var(--ts);
+    --cg1: conic-gradient(from -90deg at 5% 51%, var(--c0) 0 90deg, #fff0 0 100%) var(--ts);
+    --cg2: conic-gradient(from -90deg at 25% 50%, var(--c1) 0 90deg, #fff0 0 100%) var(--ts);
+    --cg3: conic-gradient(from -90deg at 30% 38.5%,
+            var(--c0) 0 90deg,
+            #fff0 0 100%) var(--ts);
+    --cg4: conic-gradient(from -90deg at 50% 37.5%,
+            var(--c1) 0 90deg,
+            #fff0 0 100%) var(--ts);
+    --cg5: conic-gradient(from -90deg at 55% 26%, var(--c0) 0 90deg, #fff0 0 100%) var(--ts);
+    --cg6: conic-gradient(from -90deg at 75% 25%, var(--c1) 0 90deg, #fff0 0 100%) var(--ts);
+    --cg7: conic-gradient(from -90deg at 80% 13.5%,
+            var(--c0) 0 90deg,
+            #fff0 0 100%) var(--ts);
+    --cg8: conic-gradient(from -90deg at 100% 12.5%,
+            var(--c1) 0 90deg,
+            #fff0 0 100%) var(--ts);
+
+    background: var(--dot2), var(--dot2),
+        radial-gradient(circle at 90% 100%, var(--dot)) var(--ts),
+        radial-gradient(circle at 65% 100%, var(--dot)) var(--ts),
+        radial-gradient(circle at 40% 100%, var(--dot)) var(--ts),
+        radial-gradient(circle at 15% 100%, var(--dot)) var(--ts),
+        radial-gradient(circle at 90% 12.5%, var(--dot)) var(--ts),
+        radial-gradient(circle at 65% 25%, var(--dot)) var(--ts),
+        radial-gradient(circle at 40% 37.5%, var(--dot)) var(--ts),
+        radial-gradient(circle at 15% 50%, var(--dot)) var(--ts), var(--cg1),
+        var(--cg1), var(--cg2), var(--cg2), var(--cg3), var(--cg3), var(--cg4),
+        var(--cg4), var(--cg5), var(--cg5), var(--cg6), var(--cg6), var(--cg7),
+        var(--cg7), var(--cg8), var(--cg8),
+        linear-gradient(-45deg, #fff0 0 32.25%, #0002 50%, #000 77.5%) var(--ts),
+        linear-gradient(-45deg, #fff0 0 32.25%, #000 60%) var(--ts),
+        repeating-linear-gradient(90deg, var(--c0) 0 5%, var(--c1) 0 25%) var(--ts);
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    left: 9rem;
+    top: 10rem;
+}
+
+.card h2 {
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    ;
+    inset: 5px;
+    border-radius: 15px;
+}
+
+#result_container {
+    display: none;
 }

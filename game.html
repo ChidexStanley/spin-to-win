@@ -4,38 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>THE GAME</title>
 </head>
 
 <body>
-
     <div class="container">
-        <div>
-            <h1>KINGS BIRTHDAY GAME</h1>
-            <h2>spin and win</h2>
+        <div id="game">
+            <div>
+                <h1>KINGS BIRTHDAY GAME</h1>
+                <h2>spin and win</h2>
+            </div>
+
+            <div class="wheel">
+                <img class="pointer" src="asset/pointer2.svg" alt="" srcset="">
+                <img class="spinner" src="asset/wheel.jpeg" alt="" srcset="">
+            </div>
+
+            <div>
+                <button type="button" class="button" onclick="spinWheel()">
+                    <div class="button-top"><strong>SPIN</strong></div>
+                    <div class="button-bottom"></div>
+                    <div class="button-base"></div>
+                </button>
+            </div>
+        </div>
+        <div id="result_container">
+            <div class="container_youwon">
+                <div class="card">
+                    <h2 id="result"></h2>
+                </div>
+                <div>
+                    <h3 style="color:white;
+                                top: 10rem; position: relative;">Screenshot and send to kings dm</h3>
+                </div>
+            </div>
+
         </div>
 
-        <div class="wheel">
-            <img class="pointer" src="pointer2.svg" alt="" srcset="">
-            <img class="spinner" src="wheel.jpeg" alt="" srcset="">
-        </div>
-
-        <div>
-            <button type="button" class="button" onclick="spinWheel()">
-                <div class="button-top"><strong>SPIN</strong></div>
-                <div class="button-bottom"></div>
-                <div class="button-base"></div>
-            </button>
-        </div>
-
-        <div>
-            <a id="link" href="you_win.html"></a>
-        </div>
     </div>
-
-
-     <script src="script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

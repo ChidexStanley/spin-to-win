@@ -33,32 +33,16 @@ function spinWheel() {
       prize = '200MB';
     }
 
-    // Display the prize
-    function displayLink() {
-      var link = document.getElementById("link");
-      link.click()
-    };
-    displayLink()
+    // Display the prize 
     var result = `You won: ${prize}`;
+    const savedResult = localStorage.setItem("saveResult", result)
+    const getResult = localStorage.getItem("saveResult")
+    console.log()
+    document.getElementById("result").innerHTML = getResult;
     console.log(result);
-  }, 7000);
+
+    document.getElementById("game").style.display = "none";
+    document.getElementById("result_container").style.display = "block";
+  }, 8000);
 }
-// save to json
-function saveToJson() {
-  // Get the input value
-  var inputName = document.getElementById("inputName").value;
-  var inputNo = document.getElementById("inputNo").value;
 
-  // Create a JavaScript object with the input data
-  var jsonData = {
-    "Name": inputName,
-    "No": inputNo
-  };
-
-  // Convert the object to JSON string
-  var jsonString = JSON.stringify(jsonData);
-
-  // Display the JSON data
-   document.getElementById("jsonData").textContent = jsonString;
-
-}
